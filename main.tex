@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage{graphicx, caption, subcaption}
+
+\title{Testing Energy Conservation Through Popper Launch and Compression Experiments}
+\author{David Pevzner, Joe Cardillo, Ashmaan Siddiqui, Jake Croft, Justin Chan, Bobby Kapoor}
+\date{March 2026}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{ amssymb }
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    The principle of energy conservation predicts that energy is never lost; it only changes forms. To test this principle experimentally, we launched popper toys that, when compressed, store elastic potential energy, which is converted into kinetic energy and gravitational potential energy as the popper launches. We also compressed the popper to determine the total elastic potential energy stored in it before launch. Ultimately, by comparing the kinetic and potential energies at different stages of the launch and assuming negligible air resistance, we found convincing evidence that mechanical energy is not constant; however, this does not imply that energy is not conserved, considering we failed to account for air resistance. 
+\end{abstract}
+
+\section{Introduction}
+
+Kinetic energy is the energy associated with the motion of an object and represents the work done to speed up an object to a certain velocity. It is a scalar quantity that increases with both mass and velocity and is given by 
+\begin{equation}
+    KE = \frac{1}{2}mv^2
+\end{equation}
+
+Potential energy is the energy associated with the position of an object. Each conservative(i.e. path-independent) force gives rise to a different form of potential energy, but in general, the change in potential energy of conservative forces is given by the following integral
+\begin{equation}
+    \Delta PE = -\int\vec{F}\cdot d \vec{x}
+\end{equation}
+
+Note that this implies that we can find the area under the curve of the graph of F vs x and use this to find total potential energy. Considering Eq. (2) with F being given by the force of gravity, which is mg in the negative direction, we find gravitational potential energy at h to be given by:
+\begin{equation}
+    PE - 0 = -\int_0^h -mg \hspace{3 pt} dy 
+\end{equation}
+Using the reverse power rule, we find the indefinite integral and find the difference of it evaluated at the upper and lower bounds as follows:
+\begin{equation}
+    PE = mgy \bigg|^h_0 = mgh
+\end{equation}
+The sum of the total kinetic and potential energies of a system is known as mechanical energy. According to the principle of energy conservation, in the absence of non-conservative forces such as drag and friction, mechanical energy within a system remains constant. 
+
+In an effort to test the accuracy of this principle, we launched poppers and observed whether energy was conserved as elastic potential energy is converted into kinetic energy, which becomes gravitational potential energy. That is, we tested to see if the kinetic energy of the poppers right after launch was equal to the gravitational potential energy when the poppers reached their maximum height. Our null hypothesis and alternative hypothesis were:
+
+\begin{equation*}
+    H_0 : \mu_{\left(KE-PE\right)} = 0
+\end{equation*}
+\begin{equation*}
+    H_a : \mu_{\left(KE-PE\right)} \neq 0
+\end{equation*}
+
+where $\mu_{\left(KE-PE\right)}$ is the true mean difference between the kinetic and potential energies of the popper. We also analyzed the compression of the poppers in order to determine the total energy stored in the form of elastic potential energy prior to launch. 
+
+\section{Methods and Materials}
+
+In our experiment, we utilized a 5.7g crying emoji popper from Liberty Imports made of a foam head and nylon body(i.e. coefficient of restitution COR = 0.7 to 0.95)\cite{nylon}, meter sticks, a bubble level, and a cellular device(Samsung S25 + capable of recording 120 frames per second(FPS)). In order to set up a means of measuring distances, we stood two meter sticks up with one above the other and used a level to ensure the meter sticks were not crooked. 
+
+To measure the velocity of the popper at launch, we recorded the launch frame by frame and calculated the velocity of the popper by multiplying the frame rate by the distance traveled between a single frame. Note that we measure the velocity over as short a time period as possible to reduce error due to gravitational acceleration. We then used equation 1 to calculate the kinetic energy of the popper based on its initial velocity. Using our recording device, we also filmed the poppers at their maximum heights, which we took note of and used to calculate the gravitational potential energy of the poppers using equation 4. The various stages of the launch of the popper as well as our experimental setup is show in figure 1 and the data collected from our launches is shown in table 1.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.25\linewidth]{launch.png}
+    \caption{Popper Launch Mechanism}
+    \label{fig:setup1}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{compress.png}
+    \caption{Scissor Jack Setup}
+    \label{fig:setup1}
+\end{figure}
+
+In a different experiment, we placed the popper on top of an Arboleaf CK10I kitchen scale and under a scissor jack(8x8”, min height 3”) with a meter stick vertically attached to a pole via a clamp in the background. We paid special attention that the scissor jack did not compress the head of the popper prior to data collection. We also made sure to zero the scale so that the weight of the popper would not interfere with the value we get for the spring force. We then lowered the scissor jack in increments of half a centimeter. We converted the scale measurements(grams) to Newtons by multiplying by gravitational acceleration(9.81) and dividing by 1000 to convert grams to kilograms and recorded these values in table 2. We conducted two trials per displacement. Using this data, we created a graph shown in figure 3 and found the area under the curve or the integral of the force vs displacement. This integral is the elastic potential energy stored in the popper. In order to approximate this integral, we used the triangle area formula for the linear portion of the graph and the trapezoidal rule for the nonlinear part. 
+
+\section{Results}
+
+From this data set, we find the sample mean and sample standard deviation of the difference in kinetic and potential energy to be 0.048 J and 0.022 J, respectively. This gives a test statistic of 7.44, which gives a two-sided p-value of 1.29e-5.
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{table1.png}
+         \caption{Table 1: Observed kinetic and potential energy}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{table2.png}
+         \caption{Table 2: Elastic Force vs Displacement for Poppers}
+     \end{subfigure}
+     \label{fig: two_tables}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1\linewidth]{graph.png}
+    \caption{Spring Force(N) vs. Displacement(m)}
+    \label{fig:graph}
+\end{figure}
+
+\vspace{0.5 cm}
+
+Using the trapezoidal rule and averaging over points, we can calculate the energy stored within the spring to be:
+\begin{multline}
+    U_\text{spring} = \int^{0.035}_0 F(x) dx = \frac{0.025(7.92+7.482)}{2}+\frac{0.005(7.92+7.482+6.49+7.012)}{2}+ \\\frac{0.005(6.49+7.012+5.49+5.852)}{2}
+\end{multline}
+
+\section{Discussion}
+
+Our p-value of 1.29e-5, which is far less than any reasonable significance level, leads us to reject our null hypothesis, suggesting that we have found convincing evidence that energy is not conserved when launching poppers. However, considering we did not account for the force of air resistance, this conclusion does not conclusively support that energy is not conserved. In fact, analyzing the data, it is clear that the potential energy was always less than the kinetic energy, which makes sense because energy was dissipated over time due to friction with air molecules. 
+
+Our value for the elastic potential energy stored within the spring was greater than the initial kinetic energy with which the popper was launched for all the trials except for one, contradicting energy conservation, which would suggest the two forms of energy to be equal. This can be attributed to our use of an inconsistent human hand-based popper launch that does not fully compress the poppers. Moreover, if launches are not perfectly vertical, some of the popper's kinetic energy can go to the horizontal direction which we have no way of accounting for with our setup. In future experiments, a consistent and standardized way to compress the popper before launching is needed to address these issues.
+
+Another source of error would be poppers holding less elastic energy over time due to repeated stretching and the gradual breakdown of their elastic material.
+When analyzing the spring force at different displacement values, we observed that the spring followed the linear nature of Hooke's law\cite{phys} with $r^2 = 0.99 $( very close to 1), 
+\begin{equation}
+    F = kx
+\end{equation}
+
+However, at a displacement of approximately 2.5 cm, the graph deviated from Hooke’s law, with successive measured force values decreasing rather than increasing. We hypothesize that this occurred because the spring buckled at this displacement, causing it to no longer deform elastically and resulting in a significantly reduced measured force. This loss of elastic behavior can be interpreted in terms of the coefficient of restitution, a measure of how well a system returns energy when deformed. As the spring buckled, energy was dissipated through internal friction rather than stored elastically. 
+
+To test if the magnitude of mechanical energy loss can be reasonably accounted for by air resistance, we performed a scaling calculation by calculating the work due to air resistance. To do this, we integrated the drag force
+\begin{equation}
+    F = \frac{1}{2}\rho C_d Av^2
+\end{equation}
+with respect to x to find that 
+\begin{equation}
+    W_d = \frac{1}{2}\rho C_d A\int v^2 dx = \frac{1}{2}\rho C_d A\int_0^{\frac{v_0}{g}} v^2 \frac{dx}{dt} dt = \frac{1}{2}\rho C_d A\int_0^{\frac{v_0}{g}} (v_0-gt)^3 dt
+\end{equation}
+Note that we did not account for the air resistance's effect on the velocity in the integral, but this will not have a large affect on our results. 
+
+Evaluating the integral using the chain rule and the reverse power rule, we get that
+\begin{equation}
+    W_d = \frac{\rho C_DAv_0^4}{8g}
+\end{equation}
+
+Plugging in 1.0 for the drag coefficient $C_d$, 1.225 kg/$m^3$ for the density of air \cite{phys}, 1e-3 $m^2$ for the cross sectional area of the popper, and 5.1 m/s(i.e. the minimum launch velocity we observed) as the initial velocity, we find that
+\begin{equation}
+    W_d = 0.011
+\end{equation}
+If we instead use the maximum launch velocity we observed 7.6 m/s, we find
+\begin{equation}
+    W_d = 0.052
+\end{equation}
+
+These two values give a good estimate of the energy differences in table 1, supporting the idea that the energy loss observed may be due to air resistance. 
+
+\section{Division of Work}
+
+Regarding the division of labor, Joseph Cardillo, Justin Chan, Jake Croft, Bobby Kapoor, Ashmaan Siddiqui, and David Pevzner collected the data. David Pevzner authored the abstract, introduction, results, and part of the discussion. Bobby Kapoor and Ashmaan Siddiqui wrote the Methods and Materials and created the figures. Joseph Cardillo wrote part of the discussion and labelled all figures. 
+
+\bibliographystyle{unsrt}
+\bibliography{cite}
+\nocite{*}
+
+\end{document}
