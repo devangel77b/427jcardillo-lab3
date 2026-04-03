@@ -13,4 +13,8 @@ fig3 <- ggplot(data,aes(x=x_m,y=F_N))+
      ylab('$F$, \\unit{\\newton}')+
      theme_bw(base_size=8)
 ggsave('fig3.svg',plot=fig3,width=3.4167,height=2,units="in")
-     
+
+# get area using trapz in pracma package
+library(pracma)
+print(trapz(data$x_m,data$F_N))
+# gives 0.1573
