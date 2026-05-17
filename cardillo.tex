@@ -131,7 +131,7 @@ The work done, and the elastic potential energy prior to launch, should also be 
 
 
 \section{Methods and materials}
-In our experiment, we utilized a \qty{5.7}{\gram} crying emoji popper toy (``Jumping Gens''; Liberty Imports; Liberty, MO) made of a foam head and nylon body (i.e. coefficient of restitution $COR = \numrange{0.7}{0.95}$)\cite{simeonov:2016:coefficient}. 
+In our experiment, we utilized a \qty{5.7}{\gram} crying emoji popper toy (``Jumping Gens''; Liberty Imports; Allentown, PA) made of a ethylene vinyl acetate (EVA) foam head and body (i.e. coefficient of restitution $COR = \numrange{0.7}{0.95}$)\cite{simeonov:2016:coefficient}. 
 
 \subsection{$\text{KE}_0$ and $\text{GPE}_f$ measurements}
 Popper launch kinematics were recorded using a Smartphone (S25; Samsung; Suwon, South Korea) operated at \qty{120}{frame\per\second}. To provide scale calibration, we placed two metersticks in the frame and used a bubble level to ensure the metersticks were aligned vertically. 
@@ -139,9 +139,9 @@ Popper launch kinematics were recorded using a Smartphone (S25; Samsung; Suwon, 
 To measure the velocity of the popper at launch, we recorded the launch frame by frame and calculated the velocity of the popper by multiplying the frame rate by the distance traveled between a single frame. Note that we measure the velocity over as short a time period as possible to reduce error due to gravitational acceleration. We then used \cref{eq:1} to calculate the kinetic energy of the popper based on its initial velocity ($\text{KE}_0$). We also measured the maximum height reached by the poppers using the video recordings. We then used \cref{eq:4} to calculate the gravitational potential energy at the maximum height ($\text{GPE}_f$). The various stages of the launch of the popper as well as our experimental setup is show in \cref{fig:1} and the data collected from our launches is shown in \cref{tab:1}. We then applied a $t$-test to see if the difference $\text{KE}_0-\text{GPE}_f$ was significantly different from zero \cite{starnes:2015:practice,R,ggplot2,dplyr}. 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.25\columnwidth]{figures/launch.png}
+\includegraphics[width=0.5\columnwidth]{figures/launch.png}
 \end{center}
-\caption{Popper Launch Mechanism.}
+\caption{Popper launch mechanism.}
 \label{fig:1}
 \end{figure}
 
@@ -149,7 +149,7 @@ To measure the velocity of the popper at launch, we recorded the launch frame by
 To measure the mechanical work done in compressing the popper, we placed the popper on top of a digital scale (Arboleaf CK10I; Plano, TX) to measure force, as seen in \cref{fig:1b}. We used a scissor jack (\qtyproduct{8x8}{inch} area, min height \qty{3}{inch}) with ruler clamped to a ringstand for distance measurements. We zeroed the scale and the ruler at the point where the scissor jack was just touching the head of the popper. We then lowered the scissor jack in increments of \qty{0.005}{\meter}. Scale readings were converted to \unit{\newton} using $F=mg$. We conducted two replicates from unloaded to fully compressed. \Cref{eq:5} was used to find the mechanical work done in compressing the popper. The area under the resulting curve was numerically integrated using the trapezoid method \cite{calculus,R}. 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.5\columnwidth]{figures/compress.png}
+\includegraphics[width=0.75\columnwidth]{figures/compress.png}
 \end{center}
 \caption{Scissor jack setup}
 \label{fig:1b}
@@ -171,7 +171,7 @@ From this data set, we find the sample mean and sample standard deviation of the
 %\includegraphics[width=\columnwidth]{figures/graph.png}
 \includesvg[width=\columnwidth]{fig3}
 \end{center}
-\caption{Spring force (\unit{\newton}) vs. displacement (\unit{\meter})}
+\caption{Spring force (\unit{\newton}) vs. displacement (\unit{\meter}). The work done in compressing the popper is \qty{0.1573}{\joule}.}
 \label{fig:2}
 \end{figure}
 Using the trapezoidal rule and averaging over points, we can calculate the work to compress the popper, and the energy stored within the spring to be \qty{0.1573}{\joule}.
